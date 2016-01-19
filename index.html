@@ -1,0 +1,437 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<!-- $Id: header.html,v 1.2 2008/01/14 04:18:41 vaughan Exp $ -->
+
+<HEAD>
+
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=utf-8">
+<meta name="keywords" content="autonomy, Vaughan, Richard, robot, control, AI">
+
+
+<style type="text/css">
+
+body {
+  #width: 70%;
+  text-align:left; 
+  #font-family: sans-serif;
+  #background-color: #FFF;
+  #color:#000;
+  margin: 8em 8em; 	
+}
+
+li.tech {
+  background-color: #FAA;
+}
+
+li.tool {
+  background-color: #AFA;
+}
+
+li.cult {
+  background-color: #AAF;
+}
+
+li.phil {
+  background-color: #FFA;
+}
+
+
+</style>
+
+<TITLE>Autonomous Robots</TITLE>
+
+</HEAD>
+
+<body >
+
+<h1>CMPT894: Autonomous Robot Navigation </h1>
+<h2>Richard Vaughan [vaughan@sfu.ca]</h2>
+<hr>
+<h3>Revisions</h3>
+<ul> 
+<li>2016.01.18 rtv - port from old robot AI class to Autonomous Robot Navigation
+</ul>
+<hr>
+
+<h2>Program</h2>
+
+The class consists of a two-hour weekly reading group based on the reading list
+below, and a practical robotics research project. In each session the students will:
+
+<ul>
+<li>summarize the papers you read
+<li>discuss the ideas of the week in context
+<li>discuss progress of the project
+</ul>
+
+<h2>Reading</h2>
+
+<p>Each week, read the first two (sometimes three) papers listed. Then read and
+watch the extra material if you wish. Naturally, the books contain
+much more depth than the papers, but may take more time to read than
+you have available.
+
+<p>The more you read and think about this topic, the more successful
+the class will be. Further reading, thinking, movie watching and
+debate is recommended. Evidence of wider reading and tbought will be
+rewarded in the final grade.
+
+<p>Links are given to local copies where
+  available. The <a href="papers">raw directory of
+  papers is here</a>.
+
+<h2>Project</h2>
+
+<p>Design and implement an autonomous mobile robot system in a Stage
+  simulation but suitable for porting to a real robot. The robot must perform the task
+  described below indefinitely, recharging itself as necessary.
+
+<h3>Task</h3>
+
+<ol>
+<li>Place a charging station in the centre of a large world
+<li>Make a metric occupancy grid map of the environment - assume perfect localization and sensing. Make as complete a map of the area around the charging station as possible. Generate a 2D or 3D map as you choose.
+<li>Do not get stuck
+<li>Return to recharge, then continue mapping.
+</ol>
+
+You should aim to make the map efficiently, minimize the time/distance/energy used.
+
+Complete a final demonstration and a poster report explaining the goals, key design decisions and technology you used, and an evaluation of your system. 
+
+ <h3>Getting started</h3> 
+
+<ol> 
+<li>Install Stage and familiarize
+yourself with the example controllers in (stage source
+dir)/examples/ctrl.  The <b>fasr</b> example includes basic navigation and recharging.
+
+<li>Write a new world file and a robot controller
+that explores the environment, recharging as necessary.
+</ol>
+
+<h2>Grading</h2> Final grade is based on a project including coding and a final report, plus paper presentations and contribution to discussions. 
+
+<p><hr>
+
+<h2>Reading list</h2>
+
+<h3>Key</h3>
+<p>The references are color coded as follows:
+
+<ul>
+<li class="tech">Technical
+<li class="phil">Philosophy
+<li class="tool">Tools
+<li class="cult">Cultural
+</ul>
+
+<h3>Week 0: Introduction</h3>
+
+<ul>
+
+<li>Planning, etc.
+
+</ul>
+
+</ul>
+
+<h3>Week 1: Robot Navigation, plus AI and the Frame Problem</h3>
+<ul>
+
+<li class="tech">Sebastian Thrun, et al. "Stanley: The robot that won the DARPA Grand Challenge." Journal of Field Robotics 23.9 (2006): 661-692.
+<a href="http://robots.stanford.edu/papers/thrun.stanley05.pdf">[PDF]</a>
+
+<li class="tech">[Jacob] Sebastian Thrun, et al."MINERVA: a second-generation museum tour-guide robot," in Robotics and Automation, 1999. Proceedings. 1999 IEEE International Conference on , vol.3, no., pp.1999-2005 vol.3, 1999
+doi: 10.1109/ROBOT.1999.770401
+<a href="papers/thrun.icra_minerva.pdf">[PDF]</a> <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=770401&isnumber=16696">[IEEE]</a>
+
+
+<li class="phil"> Alan M. Turing (1950). Computing machinery and
+intelligence. Mind, 59, 433-460. <a href="papers/turing1950.html">HTML
+version</a>
+
+<li class="phil">[Jack] D.C. Dennett (1987) Cognitive Wheels: The Frame Problem of AI, in Z.W. Pylyshyn (ed.) (1987), The Robot's Dilemma: The Frame Problem in Artificial Intelligence, Norwood, NJ: Ablex. <a href="papers/dennett-cognitivewheels.html">HTML</a>
+
+
+<li class="tool">Richard T.Vaughan. Massively multi-robot simulations in
+stage. Swarm Intelligence, 2(2-4):189-208, 2008. <a
+href="http://autonomy.cs.sfu.ca/doc/vaughan_si08.pdf">[PDF]</a>
+
+
+<li class="cult"> Isaac Asimov, "I, Robot", Doubleday, 1950. Chapters 1-3 (at
+least). <a href="papers/I, Robot Ch1-3.pdf">[PDF] <a href="http://en.wikipedia.org/wiki/I,_Robot#I,_Robot">Wikipedia
+entry</a> eBook ISBN 1401400396
+
+</ul>
+<p>Extras
+<ul>
+
+<li class="tech">N. Nilsson (1984) Shakey the Robot, Technical Note 325, SRI 
+International, Menlo Park, CA, 1984. <a 
+href="papers/shakey.pdf"">[PDF]</a>. (You don't need to read this long paper thoroughly, but scan it to get an idea of the major contribution it was).
+
+<li class="phil"><A href="http://plato.stanford.edu/entries/frame-problem/">Stanford Encyclopedia of Philosophy entry on the Frame Problem</a>.
+
+<li class="cult">R. Scott (1982) Blade Runner (movie), Warner Bros.
+
+<li class="cult">S. Kubrick (1968) 2001 (movie), MGM.
+
+</ul>
+
+
+<hr>
+
+<h2> BELOW HERE IS OUT OF DATE AND WILL BE SUBSTANTIALLY REVISED. PAY IT NO MIND. </h2>
+
+<h3>Week 3: Long-term Autonomy and Energy management</h3>
+<ul>
+<li>R. Pfeifer (1996) Building "Fungus Eaters": Design principles of autonomous agents. Proc. Int. Conf. on Simulation and Adaptive Behavior, 1996
+<A HREF="papers/pfeifer96building.pdf">[PDF]</A>
+
+<Li>J. Wawerla and R. T. Vaughan. (2008) Optimal robot recharging for time discounted labour. In Proceedings of the Eleventh International Conference on Artificial Life (ALife XI), August 2008. <A HREF="papers/wawerla_alife08.pdf">[PDF]</A>
+
+</ul>
+<p>Extras
+<ul>
+
+<li>A. Newell & H.A. Simon (1975) Computer Science as Empirical Inquiry: 
+Symbols and Search. 1975 ACM Turing Award Lecture. <a href="http://www.rci.rutgers.edu/~cfs/472_html/AI_SEARCH/PSS/PSSH1.html">HTML</a>
+
+<li>D. McFarland & T. Bosser (1993) Intelligent Behavior in Animals and Robots. MIT Press
+
+
+<li>M. Toda (1962). Design of a Fungus-Eater. Behavioral Science, 7, 164-183. (Reprinted in M. Toda (1982) Man, robot and society. The Hague: Martinus Nijhoff Publishing, pp100-129. (no digital copy available)
+
+<li>A. Stanton (2008) Wall-E, Pixar Animation Studios (movie)
+
+</ul>
+
+<h3>Week 4: Behavior-based robots</h3>
+
+<ul>
+
+
+<li>P. Agre and D. Chapman (1990) What are plans for?, Robotics and Autonomous Systems, pp17--34, MIT Press. Also MIT AI Memo 1050A.
+ <a href="papers/agre_chapman_plans.pdf">[PDF]</a> 
+
+<li>R.A. Brooks (1985) A Robust Layered Control System for a Mobile Robot, IEEE Journal of Robotics and Automation, Vol. 2, No. 1, March 1986, pp. 14-23; also MIT AI Memo 864, September 1985. <a href="papers/AIM-864.pdf">[PDF]</a> 
+
+<li> R.A. Brooks (1990) Elephants Don't Play Chess, Robotics and Autonomous Systems (6), 1990, pp. 3-15. <a href="papers/elephants.pdf">[PDF]</a>
+
+
+
+</ul>
+<p>Extras
+<ul>
+
+<li>H.A. Simon (1996) The Sciences of the Artificial (third edition), MIT Press.
+<li>R.A. Arkin (1998) Behavior-Based Robotics. MIT Press. 
+
+<li>E. Morris (1997) Fast, Cheap and Out of Control (movie), Sony Pictures Classics.
+
+</ul>
+
+<h3>Week 5: Navigation</h3>
+
+<ul>
+
+<li>J. Minguez and L. Montano, "Nearness Diagram Navigation (ND):
+  Collision Avoidance in Troublesome Scenarios", IEEE Transactions on
+  Robotics and Automation 20(1), February, 2004.	
+<a href="papers/nd_tra04.pdf">[PDF]</a>
+
+<li>A. Stentz, "Optimal and Efficient Path Planning for Partially-Known Environments", Proceedings of the IEEE International Conference on Robotics and Automation, May, 1994
+<a href="papers/dstar_icra94.pdf">[PDF]</a>
+
+</ul>
+<p>Extras
+<ul>
+
+<li>J. Borenstein and Y. Koren (1991) "The Vector Field Histogram -- Fast Obstacle-Avoidance for Mobile Robots." IEEE Journal of Robotics and Automation, Vol. 7, No. 3., June 1991, pp. 278-288
+<a href="papers/VFH.pdf">[PDF]</a>
+
+<li>Y. Koren, and J. Borenstein (1991) Potential Field Methods and Their Inherent Limitations 
+for Mobile Robot Navigation 
+, Proceedings of the IEEE Conference on Robotics and Automation, Sacramento, California, April 7-12, 1991, pp. 1398-1404 
+<a href="papers/PF_limitations.pdf">[PDF]</a>
+
+</ul>
+
+
+<h3>Week 6: Localization and Mapping</h3>
+<ul>
+
+<li> S. Thrun, D. Fox, W. Burgard, and F. Dellaert. Robust monte carlo
+localization for mobile robots. Articial Intelligence, 2001. 
+<a href="papers/thrun_robust.pdf">[PDF]</a>
+
+<li>Andrew Howard. "Multi-robot Simultaneous Localization and Mapping using Particle Filters". In International Journal of Robotics Research, 25(12):1243-1256, 2006
+<a href="papers/howard_multislam.pdf">[PDF]</a>
+
+</ul>
+<p>Extras
+<ul>
+
+<li>J. J. Leonard and H. F. Durrant-Whyte. Mobile robot localization by tracking geometric beacons. IEEE Trans. Robotics and Automation, 7(3):376-382, June 1991.
+<li>J. J. Leonard, I. J. Cox, and H. F. Durrant-Whyte. Dynamic map building for an autonomous mobile robot. Int. J. Robotics Research, 11(4):286--298, August 1992.
+
+</ul>
+
+
+<h3>Week 7: Multiple Robot Systems</h3>
+<ul>
+
+B. Gerkey and M. Mataric´.(2004) A formal analysis and taxonomy of task allocation in multi-robot systems.
+ Intl. Journal of Robotics Research, 23(9):939-954, September 2004.
+<a href="papers/gerkey_mrta.pdf">[PDF]</a>
+
+<li>R. Vaughan, K. Stoy, G. Sukhatme & M. Mataric (2000) Go ahead,
+make my day: robot conflict resolution by aggressive
+competition. Proc. Int. Conf. Simulation of Adaptive Behaviour, Paris,France. <A HREF="papers/vaughan_sab00.pdf">[PDF]</A> 
+
+<li>David Payton, Mike Daily, Regina Estowski, Mike Howard, Craig Lee  (2001) Pheromone Robotics. 
+Autonomous Robots 11(3):319-324, November 2001. <A HREF="papers/Payton 2001a.pdf">PDF</a>
+
+</ul>
+<p>Extras
+<ul>
+
+<li>Y.U. Cao, A.S. Fukunaga, A.B. Kahng (1997) Cooperative Mobile Robots: Antecedents and
+Directions. Autonomous Robots (4) pp1-27. [Long, useful review paper] <a href="papers/cao97cooperative.pdf">[PDF]</A>
+
+<li>M. Batalin and G. Sukhatme (2007) "The Design and Analysis of an
+Efficient Local Algorithm for Coverage and Exploration Based on Sensor
+Network Deployment", IEEE Transactions on Robotics, 23:4, pp.661-675, August 2007. <a href="papers/batalin2007.pdf">[PDF]</a>
+
+<li>M. Fontan & M. Mataric (1998) Territorial multi-robot task
+division. IEEE Transactions on Robotics and Automation, 15(5). <a href="papers/fontan_mataric_98.ps.gz">PS.GZ</A>
+
+<li>David Payton, Regina Estowski, Mike Howard (2001) Compound Behaviors in Pheromone Robotics, 
+Robotics and Autonomous Systems, 44 (3-4): 229-240, Sept. 2003 <A HREF="papers/Payton 2001b.pdf">PDF</a>
+
+</ul>
+
+<h3>Week 8: Minimalist and Nano-Robots</h3>
+
+<ul>
+<li> O.E. Holland, C. Melhuish (1999) Stigmergy, self-organisation, and sorting in collective  robotics. Artificial Life, 5:2, 173-202 1999  
+<a href="papers/stigmergy.pdf">[PDF]</a>
+
+<li>R. Feynman (1959) There's Plenty of Room at the Bottom. Talk to the American Physical Society at CalTech, published (1960) Engineering and Science. <a href="papers/feynman-plenty.html">[HTML]</a>
+
+</ul>
+<p>Extras
+<ul>
+
+<li>R. Vaughan, N. Sumpter, J. Henderson, A. Frost & S. Cameron. Experiments in Automatic Flock Control (2000) Robotics and Autonomous Systems 31 pp.109-117 <A HREF="papers/vaughan_ras00.pdf">[PDF]</A>
+
+<li>N. Stephenson (1995) The Diamond Age. Bantam Spectra
+</ul>
+
+<h3>Week 9: Internal Dynamics, Emotion & Consciousness</h3>
+
+<ul>
+<li>C. Breazeal & B. Scassellati (1999) How to build robots that make friends and influence people, Proceedings of the 1999 International Conference on Intelligent Robot Systems. <a href="papers/Breazeal-Scaz-IROS99.pdf">[PDF]</a> 
+<li>C. Breazeal (2003) Emotion and sociable humanoid robots. Int. Jnl. Human-Computer Interaction, 59. pp199-155. <a href="http://robotic.media.mit.edu/Papers/Breazeal-ijhcs03.pdf">[PDF]</a>
+
+</ul>
+<p>Extras
+<ul>
+
+<li>D. McFarland (1995) Opportunity versus Goals in Robots, Animals and People.In Roitblat & Meyer (Eds.)  Comparative Approaches to Cognitive Science. 415--433. MIT Press. (Available as an eBook in the SFU library)
+
+<li>A. Clark (1997) Being There: Putting Brain, Body, and World Together Again. MIT Press.
+<li>D. Dennett (1992) Consciousness Explained. Back Bay Books.
+</ul>
+
+
+
+
+
+
+
+<h3>Week 10: Biomimetics</h3>
+<ul>
+<li>B. Webb. (1995) Using robots to model animals: a cricket test . Robotics and Autonomous Systems, 16, 117-134.
+
+<li>B. Webb (2000) What does robotics offer animal behaviour? Animal Behavior 60 pp545-558. <a href="papers/webb-animal.pdf">[PDF]</a>
+
+</ul>
+<p>Extras
+<ul>
+
+<li>
+J.Y. Lettvin, H.R. Maturana, W.S. McCulloch, and W.H. Pitts, (1959) What  the Frog's Eye Tells the Frog's Brain. Proceedings of the IRE (Institute  of Radio Engineers, now the IEEE), 47 : pp1940-1959
+
+<li>Webb, B. (2002) Robots in invertebrate neuroscience Nature 417:359-363 <a href="webb_nature_02.pdf">[PDF]</A>
+
+
+<!-- <li>Holland et al. CalTech odor plume stuff
+-->
+</ul>
+
+<h3>Week 11: Evolutionary Robotics</h3>
+
+<ul>
+
+<li>S. Wilson (1985) Knowledge Growth in an Artificial Animal. Proceedings of the First International Conference on Genetic Algorithms and their Applications, Carnegie Melon University, Pittsburgh, 1985, pp.1-8. <a href="papers/wilson_animat.pdf">[PDF]</A>
+
+
+<li> P. Husbands, I. Harvey, D. Cliff and G. Miller (1997) Artificial Evolution: A New Path for Artificial Intelligence?  Brain and Cognition, 34:130-159.  <a href="papers/Husbands_BC1997.pdf">[PDF]</a> 
+
+
+</ul>
+<p>Extras
+<ul>
+
+<li>N. Jakobi (1997) Evolutionary Robotics and the Radical Envelope
+of Noise Hypothesis. Adaptive Behavior, 6(2):325-368. <a href="papers/jakobi_radical.pdf">[PDF]</a>
+
+<li>R. Dawkins (1989) The Selfish Gene. Oxford Paperbacks.
+
+<li>J. Maynard-Smith (1982) Evolution and the Theory of Games. Cambridge University Press.
+
+</ul>
+
+
+<!--
+<h3>Week 11</h3> 
+
+<ul> 
+
+<li>Maxim A. Batalin and Gaurav S. Sukhatme (2004) "Coverage,
+Exploration and Deployment by a Mobile Robot and Communication
+Network" To appear in Telecommunication Systems Journal, Special Issue
+on Wireless Sensor Networksm 26(2-4) <a
+href="papers/batalin_sukhatme_04.pdf">[PDF]</A>)
+
+<li>Alberto Cerpa and Deborah Estrin (2004) "ASCENT:
+Adaptive Self-Configuring sEnsor Networks Topologies" CENS Technical
+Report #40 , April 2004.  <a href="papers/cerpa_estrin_ASCENT_04.pdf">[PDF]</A>
+
+</ul>
+<p>Extras
+<ul>
+
+<li>(Estrin (Chair), "Embedded Everywhere: A research agenda for
+networked systems of embedded computers" Report by the Committee on
+Networked Systems of Embedded Computers, National Research Council
+(USA). 2001.  <a
+href="http://books.nap.edu/html/embedded_everywhere/">ONLINE
+BOOK</a>). This is an unusual insight into the early stages of a
+research program. Compare the projects foreseen here with the results
+above of 4 years later.
+-->
+
+</ul>
+
+
+
+<p>
+<hr>
+
+</BODY>
+</HTML>
